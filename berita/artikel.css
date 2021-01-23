@@ -1,0 +1,34 @@
+body{
+    background-color: blueviolet;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3cm 1.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "foto judul";
+    border-top: 3px solid black;
+    margin-left: 2cm;
+  }
+
+  .grid-container * {
+    position: relative;
+   }
+
+  .foto { grid-area; }
+  
+  .judul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "area-judul area-judul area-judul" "tanggal tanggal tanggal";
+    grid-area: judul;
+  }
+  
+  .tanggal { grid-area: tanggal; }
+  
+  .area-judul { 
+    grid-area: area-judul; 
+    font-size: 26px;
+    }
